@@ -1,0 +1,54 @@
+Project Title: Mini IoT Gas, Temperature, and Humidity Monitoring System
+
+Project Description:
+        This is an IoT-based environmental monitoring project using the ESP8266 NodeMCU module. 
+        It monitors gas levels (using the MQ5 sensor), temperature and humidity (using the DHT11 sensor), and allows remote control of an LED via the Blynk mobile application.
+        The sensor readings are displayed in real-time on the Blynk dashboard, and alerts are sent when thresholds are exceeded.
+
+Hardware Used:
+        - NodeMCU ESP8266 (ESP-12E)
+        - MQ5 Gas Sensor (Analog to A0)
+        - DHT11 Temperature and Humidity Sensor (Digital to D4 / GPIO2)
+        - LED (Connected to D1 / GPIO5)
+        - Blynk App (Mobile dashboard)
+
+Pin Connections:
+        - MQ5 Sensor     -> A0 (Analog)                                // use virtual pins of blynk V0
+        - DHT11 Sensor   -> D4 (GPIO2)                                 // use virtual pins of blynk V1 and V2
+        - LED            -> D1 (GPIO5) [Digital Output via Blynk]      // use digital pins of blynk D5
+
+Software Used:
+        - Arduino IDE
+        - ESP8266 Board Package
+        - Blynk Library
+        - DHT Sensor Library
+
+Blynk Configuration:
+        - Template Name: Mini IoT Project
+        - Template ID: TMPL37DmRuejo
+        - Auth Token: [Replace with your own or keep it secure]
+        - Virtual Pins:
+          - V0: Gas Value
+          - V1: Temperature
+          - V2: Humidity
+        - Digital Pin Control:
+          - D1 (GPIO5) used to control LED from Blynk app
+
+Project Features:
+        - Real-time gas, temperature, and humidity monitoring
+        - Automatic gas and temperature alerts via Blynk notifications
+        - Remote LED ON/OFF control via Blynk app on linked device and email
+        - Serial monitor debugging support at 115200 baud
+
+Setup Instructions:
+        1. Open the `.ino` file in Arduino IDE.
+        2. Install required libraries: Blynk, DHT sensor, ESP8266.
+        3. Enter your WiFi credentials and Blynk Auth Token.
+        4. Upload the code to NodeMCU via USB.
+        5. Open Blynk app, link with the template, and use correct virtual pins.
+        6. Connect sensors as per the wiring diagram and power on.
+
+Author: Nihal Hasan Jalal
+Date: July 2025
+Location: Sangli, Maharashtra
+
